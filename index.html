@@ -5,9 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/4753f2df7b.js' crossorigin='anonymous'></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap');
 
+/* #242943 #50ADC9 */
 
 body,h1,h2,h3,h4,h5,h6 {font-family: 'IBM Plex Sans', sans-serif;}
 body, html {
@@ -18,29 +20,39 @@ body, html {
 
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #ebeae7;
+  background-color: #242943;
 }
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url('img/parallax1.jpg');
-  min-height: 100%;
+  background-image: url('img/bg1.png');
+  background-position: center top;
+  min-height: 65%;
+  background-size: auto;
+  background-color: #464959;  
 }
 
 /* Second image (images) */
 .bgimg-2 {
-  background-image: url("img/parallax2.jpg");
+  background-image: url("img/");
   min-height: 400px;
 }
 
-/* Third image (Contact) */
+/* Third image */
 .bgimg-3 {
-  background-image: url("img/parallax3.jpg");
+  background-image: url("img/");
+  background-color: #dedfe6;
+  min-height: 400px;
+}
+
+/* Fourth image */
+.bgimg-4 {
+  background-image: url("img/");
   min-height: 400px;
 }
 
@@ -54,6 +66,38 @@ body, html {
     min-height: 400px;
   }
 }
+
+.w3-display-midleft {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%,-25%);
+    -ms-transform: translate(-50%,-25%);
+}
+
+.w3-darkblue-bg {
+    background-color: #242943!important;
+    color: #ffffff;
+}
+
+.w3-hover-opacity:hover {
+    opacity: 0.80;
+}
+
+.w3-lightblue {
+  color: #50ADC9!important;
+}
+
+.w3-darkblue {
+    color: #242943!important;
+}
+
+.w3-hover-lightblue:hover {
+  background-color: #50ADC9!important;
+  color: #242943!important;
+}
+
+
 </style>
 <body>
 
@@ -63,13 +107,11 @@ body, html {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#dataset" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-download"></i> DATASET</a>
-    <a href="#images" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> IMAGES</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
+    <a href="#home" class="w3-bar-item w3-button w3-lightblue w3-hover-lightblue">HOME</a>
+    <a href="#dataset" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-download"></i> DATASET</a>
+    <a href="#images" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-th"></i> IMAGES</a>
+    <a href="#mission" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-car-side"></i> MISSION</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-envelope"></i> CONTACT</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -77,36 +119,31 @@ body, html {
     <a href="#dataset" class="w3-bar-item w3-button" onclick="toggleFunction()">DATASET</a>
     <a href="#images" class="w3-bar-item w3-button" onclick="toggleFunction()">IMAGES</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JKK <span class="w3-hide-small">Research</span>
+<div class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-midleft" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-darkblue-bg w3-xlarge w3-wide">JKK <span class="w3-hide-small">Research</span>
   </div>
 </div>
 
 <!-- Container (dataset Section) -->
 <div class="w3-content w3-container w3-padding-64" id="dataset">
-  <h3 class="w3-center">DATASET</h3>
-  <p class="w3-center"><em>Our mission</em></p>
-  <p>
-    One of our most researched topic is self-driving (a.k.a autonomous) vehicles. 
-    We believe that fully self-driving technology can lead to safe, easy and sustainable transportation. 
-    We are preparing for this new technology-to-come by studying and researching its fundamentals and exploring the possibilities it offers. 
-    This process helps us gain unique knowledge on the mixed field of mechatronics, robotics and artificial intelligence. Future transportation can be safe, easy and sustainable without compromises.</p>
+  <h3 class="w3-center">JKK_DATASET_01</h3>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-download w3-margin-right"></i>JKK_DATASET_01</b></p><br>
       <img src="img/p1.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="dataset1" width="500" height="333">
     </div>
-
+    
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
       <p>
-        First dataset.
+        <a href="https://github.com/szenergy/szenergy-public-resources/blob/master/data/rosbag/details/leaf-2020-06-10-campus.md" class="w3-button w3-darkblue-bg w3-hover-lightblue w3-round"><i class="fa fa-download w3-margin-right"></i>leaf-2020-06-10-campus.bag</a>
+      </p>
+      <p>
+        <a href="https://github.com/szenergy/szenergy-public-resources/tree/master/data/rosbag" class="w3-button w3-darkblue-bg w3-lightblue w3-hover-lightblue w3-round"><i class="fa fa-download w3-margin-right"></i>JKK_DATASET_01</a>
       </p>
     </div>
   </div>
@@ -114,7 +151,7 @@ body, html {
 
 
 <!-- Second Parallax Image with images Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
+<div class="bgimg-2 w3-display-container">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">IMAGES</span>
   </div>
@@ -171,8 +208,30 @@ body, html {
   </div>
 </div>
 
+
 <!-- Third Parallax Image with images Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
+<div class="bgimg-3 w3-display-container">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">MISSSION</span>
+  </div>
+</div>
+
+<!-- Container (mission Section) -->
+<div class="w3-content w3-container w3-padding-64" id="mission">
+  <h3 class="w3-center">OUR MISSION</h3>
+  <p>
+    One of our most researched topic is self-driving (a.k.a autonomous) vehicles. 
+    We believe that fully self-driving technology can lead to safe, easy and sustainable transportation. 
+    We are preparing for this new technology-to-come by studying and researching its fundamentals and exploring the possibilities it offers. 
+    This process helps us gain unique knowledge on the mixed field of mechatronics, robotics and artificial intelligence. Future transportation can be safe, easy and sustainable without compromises.
+  </p>
+  <div class="w3-center">
+    <img src="img/jkk01.svg" alt="JKK logo" style="width:500px;">
+  </div>
+</div>
+
+<!-- Third Parallax Image with images Text -->
+<div class="bgimg-4 w3-display-container">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
   </div>
@@ -198,14 +257,16 @@ body, html {
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+<footer class="w3-center w3-black w3-darkblue-bg w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <a href="https://www.youtube.com/channel/UCVj-TXtn3W3Pk20fllrZ1qg"><i class="fa fa-youtube w3-hover-opacity"></i></a>
-    <a href="https://www.youtube.com/szenergyteam"><i class="fa fa-youtube w3-hover-opacity"></i></a>
-    <a href="https://www.instagram.com/szenergyteam"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+  <div class="w3-section">
+    <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://www.youtube.com/channel/UCVj-TXtn3W3Pk20fllrZ1qg"><i class="fab fa-youtube"></i> JKK</a></div>
+    <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://www.youtube.com/szenergyteam"><i class="fab fa-youtube"></i> SZENERGY</a></div>
+    <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://www.youtube.com/szenergyteam"><i class="fab fa-instagram"></i> SZENERGY</a></div>
   </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <div class="w3-opacity-max">
+  <p>Powered by <a style="text-decoration:none" href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank">w3.css</a></p>
+  </div>
 </footer>
  
 <script>

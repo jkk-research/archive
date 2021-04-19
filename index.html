@@ -112,6 +112,7 @@ body, html {
     <a href="#images" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-th"></i> IMAGES</a>
     <a href="#mission" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-car-side"></i> MISSION</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="https://github.com/szenergy/szenergy-public-resources/wiki" class="w3-bar-item w3-button w3-hide-small w3-lightblue w3-hover-lightblue"><i class="fa fa-wikipedia-w"></i> WIKI</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -119,6 +120,7 @@ body, html {
     <a href="#dataset" class="w3-bar-item w3-button" onclick="toggleFunction()">DATASET</a>
     <a href="#images" class="w3-bar-item w3-button" onclick="toggleFunction()">IMAGES</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="https://github.com/szenergy/szenergy-public-resources/wiki" class="w3-bar-item w3-button" onclick="toggleFunction()">WIKI</a>
   </div>
 </div>
 
@@ -134,11 +136,13 @@ body, html {
   <h3 class="w3-center">JKK_DATASET_01</h3>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <img src="img/p1.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="dataset1" width="500" height="333">
+      <span class="w3-hide-small">
+        <a href="https://github.com/szenergy/szenergy-public-resources/tree/master/data/rosbag"><img src="img/dataset01a.png" class="w3-round w3-image w3-opacity-off w3-hover-opacity" alt="dataset01" width="500" height="333"></a>
+      </span>
     </div>
     
     <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
+    <div class="w3-col m6 w3-padding-large">
       <p>
         <a href="https://github.com/szenergy/szenergy-public-resources/blob/master/data/rosbag/details/leaf-2020-06-10-campus.md" class="w3-button w3-darkblue-bg w3-hover-lightblue w3-round"><i class="fa fa-download w3-margin-right"></i>leaf-2020-06-10-campus.bag</a>
       </p>
@@ -218,7 +222,7 @@ body, html {
 
 <!-- Container (mission Section) -->
 <div class="w3-content w3-container w3-padding-64" id="mission">
-  <h3 class="w3-center">OUR MISSION</h3>
+  <!--<h3 class="w3-center">OUR MISSION</h3> -->
   <p>
     One of our most researched topic is self-driving (a.k.a autonomous) vehicles. 
     We believe that fully self-driving technology can lead to safe, easy and sustainable transportation. 
@@ -226,7 +230,16 @@ body, html {
     This process helps us gain unique knowledge on the mixed field of mechatronics, robotics and artificial intelligence. Future transportation can be safe, easy and sustainable without compromises.
   </p>
   <div class="w3-center">
-    <img src="img/jkk01.svg" alt="JKK logo" style="width:500px;">
+    <img src="img/jkk01.svg" alt="JKK logo" style="width:250px;">
+    <span class="w3-hide-small">
+      <img src="img/jkk02.svg" alt="JKK logo" style="width:250px;"> <br/>
+    </span>
+    <!--
+    <img src="img/sze01.svg" alt="SZE logo" style="width:250px;">
+    <span class="w3-hide-small">
+      <img src="img/sze02.svg" alt="SZE logo" style="width:250px;">
+    </span>
+    -->
   </div>
 </div>
 
@@ -251,13 +264,14 @@ body, html {
         <i class="fa fa-map-markes fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Széchenyi University IS Building 2nd floor<br>
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +36 96 613 680 <br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: jkk@sze.hu<br>
+        <i class="fa fa-external-link-square fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Web: <a href="https://jkk.sze.hu/">jkk.sze.hu</a><br>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-darkblue-bg w3-padding-64 w3-opacity w3-hover-opacity-off">
+<footer class="w3-center w3-black w3-darkblue-bg w3-padding-64 w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-section">
     <div class="w3-hover-opacity"><a style="text-decoration:none" href="https://www.youtube.com/channel/UCVj-TXtn3W3Pk20fllrZ1qg"><i class="fab fa-youtube"></i> JKK</a></div>

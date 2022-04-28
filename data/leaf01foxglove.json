@@ -1,0 +1,179 @@
+{
+  "configById": {
+    "SourceInfo!4d7rfhe": {},
+    "DiagnosticSummary!msjvo7": {
+      "minLevel": 0,
+      "pinnedIds": [],
+      "hardwareIdFilter": "",
+      "topicToRender": "/diagnostics",
+      "sortByLevel": true
+    },
+    "RawMessages!tahvzj": {
+      "topicPath": "/vehicle_status",
+      "diffTopicPath": "",
+      "diffMethod": "custom",
+      "diffEnabled": false,
+      "showFullMessageForDiff": false
+    },
+    "RawMessages!3jwh6ii": {
+      "topicPath": "/gps/nova/imu",
+      "diffTopicPath": "",
+      "diffMethod": "custom",
+      "diffEnabled": false,
+      "showFullMessageForDiff": false
+    },
+    "Plot!2vgsd7y": {
+      "paths": [
+        {
+          "value": "/vehicle_speed_kmph.data",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "/wheel_angle_deg.data",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "minYValue": "",
+      "maxYValue": "",
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "ImageViewPanel!1dz4gql": {
+      "cameraTopic": "/zed_node/left/image_rect_color/compressed",
+      "enabledMarkerTopics": [],
+      "mode": "fit",
+      "pan": {
+        "x": 0,
+        "y": 0
+      },
+      "rotation": 0,
+      "synchronize": false,
+      "transformMarkers": false,
+      "zoom": 1
+    },
+    "map!253zxmb": {
+      "disabledTopics": [],
+      "layer": "map",
+      "zoomLevel": 13
+    },
+    "3D Panel!21i5yhl": {
+      "autoSyncCameraState": false,
+      "autoTextBackgroundColor": true,
+      "cameraState": {
+        "targetOffset": [
+          3.069958336468402,
+          2.263698958742317,
+          0
+        ],
+        "distance": 43.57747734520085,
+        "perspective": true,
+        "phi": 0.9973418643690969,
+        "thetaOffset": 1.106241370949789,
+        "fovy": 0.7853981633974483,
+        "near": 0.01,
+        "far": 5000
+      },
+      "checkedKeys": [
+        "name:Topics",
+        "t:/left_os1/os1_cloud_node/points",
+        "t:/right_os1/os1_cloud_node/points"
+      ],
+      "clickToPublishPoseTopic": "/move_base_simple/goal",
+      "clickToPublishPointTopic": "/clicked_point",
+      "clickToPublishPoseEstimateTopic": "/initialpose",
+      "clickToPublishPoseEstimateXDeviation": 0.5,
+      "clickToPublishPoseEstimateYDeviation": 0.5,
+      "clickToPublishPoseEstimateThetaDeviation": 0.2617993877991494,
+      "customBackgroundColor": "#000000",
+      "diffModeEnabled": true,
+      "expandedKeys": [],
+      "followMode": "follow",
+      "followTf": "/base_link",
+      "modifiedNamespaceTopics": [],
+      "pinTopics": false,
+      "settingsByKey": {
+        "t:/left_os1/os1_cloud_node/points": {
+          "pointSize": 3
+        },
+        "t:/right_os1/os1_cloud_node/points": {
+          "pointSize": 3
+        }
+      },
+      "useThemeBackgroundColor": true
+    },
+    "StateTransitions!2r7jguc": {
+      "paths": [
+        {
+          "value": "/gps/duro/fix.status.status",
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "/gps/nova/bestvel.velocity_type",
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "/gps/nova/fix.status.status",
+          "timestampMethod": "receiveTime"
+        }
+      ]
+    },
+    "Tab!2jrdgin": {
+      "activeTabIdx": 3,
+      "tabs": [
+        {
+          "title": "info",
+          "layout": {
+            "first": "SourceInfo!4d7rfhe",
+            "second": "DiagnosticSummary!msjvo7",
+            "direction": "row"
+          }
+        },
+        {
+          "title": "diagnostics",
+          "layout": {
+            "first": "RawMessages!tahvzj",
+            "second": "RawMessages!3jwh6ii",
+            "direction": "row"
+          }
+        },
+        {
+          "title": "debug",
+          "layout": "Plot!2vgsd7y"
+        },
+        {
+          "title": "perception",
+          "layout": {
+            "first": {
+              "first": "ImageViewPanel!1dz4gql",
+              "second": "map!253zxmb",
+              "direction": "column"
+            },
+            "second": {
+              "first": "3D Panel!21i5yhl",
+              "second": "StateTransitions!2r7jguc",
+              "direction": "column",
+              "splitPercentage": 79.19540609220817
+            },
+            "direction": "row"
+          }
+        }
+      ]
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "linkedGlobalVariables": [],
+  "playbackConfig": {
+    "speed": 1,
+    "messageOrder": "receiveTime"
+  },
+  "layout": "Tab!2jrdgin"
+}

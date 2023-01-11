@@ -44,7 +44,8 @@
       "showPlotValuesInLegend": true,
       "isSynced": true,
       "xAxisVal": "timestamp",
-      "sidebarDimension": 240
+      "sidebarDimension": 240,
+      "title": "Plot"
     },
     "ImageViewPanel!1dz4gql": {
       "cameraTopic": "/zed_node/left/image_rect_color/compressed",
@@ -62,52 +63,71 @@
     "map!253zxmb": {
       "disabledTopics": [],
       "layer": "map",
-      "zoomLevel": 13
+      "zoomLevel": 13,
+      "center": {
+        "lat": 47.69403727101291,
+        "lon": 17.629659155717203
+      },
+      "customTileUrl": "",
+      "followTopic": "",
+      "topicColors": {}
     },
-    "3D Panel!21i5yhl": {
-      "autoSyncCameraState": false,
-      "autoTextBackgroundColor": true,
+    "3D!36rb111": {
+      "followTf": "base_link",
+      "followMode": "follow-position",
       "cameraState": {
+        "perspective": true,
+        "distance": 48.28529345728329,
+        "phi": 58.17499818469991,
+        "thetaOffset": 88.65516798191514,
         "targetOffset": [
           3.069958336468402,
           2.263698958742317,
           0
         ],
-        "distance": 43.57747734520085,
-        "perspective": true,
-        "phi": 0.9973418643690969,
-        "thetaOffset": 1.106241370949789,
-        "fovy": 0.7853981633974483,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
         "near": 0.01,
         "far": 5000
       },
-      "checkedKeys": [
-        "name:Topics",
-        "t:/left_os1/os1_cloud_node/points",
-        "t:/right_os1/os1_cloud_node/points"
-      ],
-      "clickToPublishPoseTopic": "/move_base_simple/goal",
-      "clickToPublishPointTopic": "/clicked_point",
-      "clickToPublishPoseEstimateTopic": "/initialpose",
-      "clickToPublishPoseEstimateXDeviation": 0.5,
-      "clickToPublishPoseEstimateYDeviation": 0.5,
-      "clickToPublishPoseEstimateThetaDeviation": 0.2617993877991494,
-      "customBackgroundColor": "#000000",
-      "diffModeEnabled": true,
-      "expandedKeys": [],
-      "followMode": "follow",
-      "followTf": "/base_link",
-      "modifiedNamespaceTopics": [],
-      "pinTopics": false,
-      "settingsByKey": {
-        "t:/left_os1/os1_cloud_node/points": {
-          "pointSize": 3
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.2617993877991494
+      },
+      "topics": {
+        "/left_os1/os1_cloud_node/points": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo",
+          "pointSize": 6.300534166098594
         },
-        "t:/right_os1/os1_cloud_node/points": {
-          "pointSize": 3
+        "/right_os1/os1_cloud_node/points": {
+          "visible": true,
+          "colorField": "intensity",
+          "colorMode": "colormap",
+          "colorMap": "turbo",
+          "pointSize": 5.999514229592996
         }
       },
-      "useThemeBackgroundColor": true
+      "scene": {},
+      "transforms": {},
+      "layers": {}
     },
     "StateTransitions!2r7jguc": {
       "paths": [
@@ -123,7 +143,8 @@
           "value": "/gps/nova/fix.status.status",
           "timestampMethod": "receiveTime"
         }
-      ]
+      ],
+      "isSynced": true
     },
     "Tab!2jrdgin": {
       "activeTabIdx": 3,
@@ -157,7 +178,7 @@
               "direction": "column"
             },
             "second": {
-              "first": "3D Panel!21i5yhl",
+              "first": "3D!36rb111",
               "second": "StateTransitions!2r7jguc",
               "direction": "column",
               "splitPercentage": 79.19540609220817
